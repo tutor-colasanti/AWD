@@ -2,140 +2,32 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-    font-family: "Lato", sans-serif;
-    margin: 0;
-    font-size: 18px;
-}
-
-.sidenav {
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    z-index: 0;
-    top: 45px;
-    left: 0;
-    background-color: #FFD230;
-    overflow-x: hidden;
-    padding-top: 0px;
-}
-
-.sidenav a {
-    padding: 0px 6px 6px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-}
-
-.sidenav a:hover {
-    color: #555;
-}
-
-.collapsible {
-    background-color: #FFD230;
-    color: #111;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-}
-
-.active, .collapsible:hover {
-    background-color: #777;
-    color: #f2f2f2;
-}
-
-.content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    color: #777;
-    background-color: #FFD230;
-}
-
-
-.main {
-    padding: 35px;
-    margin-left: 200px; 
-}
-
-#navbar {
-    z-index: 2;
-  overflow: hidden;
-  background-color: #777;
-}
-
-
-#navbar a {
-  float: left;
-  display: block;
-  color: #FFD230;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 5px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
+<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-<div id="navbar" class="sticky">
-  <a href="javascript:void(0)">Advanced Web Development</a>
-</div>
-<div class="sidenav">
+    <div id="navbar" class="sticky">
+        <a href="javascript:void(0)">Advanced Web Development</a>
+    </div>
+    
+    <div class="sidenav">
+        <div class="collapsible">LAMP</div>
+        <div class="content">
+            <div class="select" onclick="loadDoc('partials/Apache2.html')">Install LAMP</div>
+        </div>
+        <div class="collapsible">Open Section 2</div>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="collapsible">Open Section 3</div>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
 
-<button class="collapsible">Open Section 1</button>
-<div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-<button class="collapsible">Open Section 2</button>
-<div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-<button class="collapsible">Open Section 3</button>
-<div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div></div>
+    <div class="main" id="partial">
 
-<div class="main">
-  <h2>Sidenav Example</h2>
-  <p>This sidenav is always shown.</p>
-<h3>Sticky Navigation Example</h3>
-  <p>The navbar will stick to the top when you reach its scroll position.</p>
-   <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  </div>
-     
-     
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-</script>     
+    </div>
+         
+    <script src="js/main.js"></script>     
 </body>
 </html> 

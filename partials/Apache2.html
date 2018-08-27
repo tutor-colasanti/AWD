@@ -1,0 +1,19 @@
+sudo apt-get install tasksel
+sudo tasksel install lamp-server
+mkdir PublicHTML
+set
+chmod -R 755 PublicHTML/
+in :
+sudo nano /etc/apache2/apache2.conf
+change 
+<Directory /var/www/>
+to 
+<Directory /home/ric/PublicHTML/>
+in
+sudo nano /etc/apache2/sites-available/000-default.conf 
+change
+DocumentRoot /var/www/html
+to
+DocumentRoot /home/ric/PublicHTML
+
+sudo service apache2 restart
